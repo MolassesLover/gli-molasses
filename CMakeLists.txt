@@ -106,13 +106,13 @@ configure_package_config_file(
 )
 
 if(NOT NIX_BUILD)
-	set(BINARY_DIR_NEW ${CMAKE_CURRENT_BINARY_DIR})
+	set(BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
 install(
 	FILES
-		"${CMAKE_CURRENT_BINARY_DIR}/${GLI_INSTALL_CONFIGDIR}/gliConfig.cmake"
-		"${CMAKE_CURRENT_BINARY_DIR}/gliVersion.cmake"
+	"${BINARY_DIR}/${GLI_INSTALL_CONFIGDIR}/gliConfig.cmake"
+	"${BINAR_DIR}/gliVersion.cmake"
 	DESTINATION ${GLI_INSTALL_CONFIGDIR}
 )
 
